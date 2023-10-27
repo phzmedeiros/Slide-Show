@@ -6,10 +6,9 @@ body {
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
-  /*min-height: calc(100vh - 2rem);*/
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-evenly;
   overflow: hidden;
   position: relative;
@@ -160,13 +159,6 @@ body::after {
   enable-background: new;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-}
-
 button {
   padding: 15px 40px;
   margin: 10px;
@@ -187,9 +179,11 @@ button {
 }
 
 #slideshow-container img {
-  max-width: 100%; /* Adicione esta propriedade para limitar o tamanho máximo das imagens */
-  height: auto;
+  max-width: 100%;
+  max-height: 40rem;
   display: none;
+  border-radius: 25px;
+  object-fit: contain;
 }
 
 #slideshow-container img:first-child {
@@ -200,8 +194,4 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-img {
-  border-radius: 25px;
 }
